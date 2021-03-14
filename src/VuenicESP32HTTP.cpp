@@ -4,6 +4,46 @@ VuenicESP32HTTP::VuenicESP32HTTP(String apiKey) {
     _apiKey = apiKey;
 }
 
+// String Value
+void VuenicESP32HTTP::add(String key, String value) {
+    DynamicJsonDocument doc(256);
+    deserializeJson(doc, jsonString);    
+    doc[key] = value;
+    String newInsert;
+    serializeJson(doc, newInsert);
+    jsonString = newInsert;
+}
+
+// Integer Value
+void VuenicESP32HTTP::add(String key, int value) {
+    DynamicJsonDocument doc(256);
+    deserializeJson(doc, jsonString);    
+    doc[key] = value;
+    String newInsert;
+    serializeJson(doc, newInsert);
+    jsonString = newInsert;
+}
+
+// Float Value
+void VuenicESP32HTTP::add(String key, float value) {
+    DynamicJsonDocument doc(256);
+    deserializeJson(doc, jsonString);    
+    doc[key] = value;
+    String newInsert;
+    serializeJson(doc, newInsert);
+    jsonString = newInsert;
+}
+
+// Double Value
+void VuenicESP32HTTP::add(String key, double value) {
+    DynamicJsonDocument doc(256);
+    deserializeJson(doc, jsonString);    
+    doc[key] = value;
+    String newInsert;
+    serializeJson(doc, newInsert);
+    jsonString = newInsert;
+}
+
 bool VuenicESP32HTTP::wifiConnection(String wifiSSID, String wifiPassword) {
     char wifiSSIDChar[wifiSSID.length()+1];
     char wifiPasswordChar[wifiPassword.length()+1];

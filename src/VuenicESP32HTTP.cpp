@@ -5,7 +5,7 @@ VuenicESP32HTTP::VuenicESP32HTTP(String apiKey) {
 }
 
 // String Value
-void VuenicESP32HTTP::add(String key, String value) {
+void VuenicESP32HTTP::add(int key, String value) {
     DynamicJsonDocument doc(256);
     deserializeJson(doc, jsonString);    
     doc[String(key)] = value;
@@ -15,7 +15,7 @@ void VuenicESP32HTTP::add(String key, String value) {
 }
 
 // Integer Value
-void VuenicESP32HTTP::add(String key, int value) {
+void VuenicESP32HTTP::add(int key, int value) {
     DynamicJsonDocument doc(256);
     deserializeJson(doc, jsonString);    
     doc[String(key)] = value;
@@ -25,7 +25,7 @@ void VuenicESP32HTTP::add(String key, int value) {
 }
 
 // Float Value
-void VuenicESP32HTTP::add(String key, float value) {
+void VuenicESP32HTTP::add(int key, float value) {
     DynamicJsonDocument doc(256);
     deserializeJson(doc, jsonString);    
     doc[String(key)] = value;
@@ -35,7 +35,7 @@ void VuenicESP32HTTP::add(String key, float value) {
 }
 
 // Double Value
-void VuenicESP32HTTP::add(String key, double value) {
+void VuenicESP32HTTP::add(int key, double value) {
     DynamicJsonDocument doc(256);
     deserializeJson(doc, jsonString);    
     doc[String(key)] = value;

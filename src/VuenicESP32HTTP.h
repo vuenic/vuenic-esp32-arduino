@@ -17,6 +17,9 @@ class VuenicESP32HTTP
       
     private:
       String _apiKey;
+      String _server = "http://api.vuenic.com/v1/devices/";
+      String _port = "80";
+      String jsonString = "{}";
       char* _wifiSSID;
       char* _wifiPass;
       String ipToString(IPAddress ip);

@@ -1,4 +1,4 @@
-# Dokumentasi Integrasi Vuenic ESP32
+# Integrasi Vuenic ESP32
 
 Nama Sensor         | Tipe Data Sensor  | Kode Sensor (int)     | 
 --------------------|-------------------| ----------------------|

@@ -3,6 +3,7 @@
 #include <Arduino.h>
 #include <ArduinoJson.h>
 #include <WiFi.h>
+#include <HTTPClient.h>
 
 class VuenicESP32HTTP
 {
@@ -13,6 +14,7 @@ class VuenicESP32HTTP
       void add(int key, int value);
       void add(int key, float value);
       void add(int key, double value);
+      String send();
       bool wifiConnection(String wifiSSID, String wifiPassword);
       
     private:
